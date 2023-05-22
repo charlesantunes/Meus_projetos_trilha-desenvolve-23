@@ -1,0 +1,15 @@
+.card {
+    background-color: var(--branco);
+    border-radius: 8px;
+    box-shadow: 0 5px 10px var(--cinzaescuro);
+    max-width: 752px;
+    padding: 1.75rem;
+    margin: 0 auto;
+}
+
+@media(max-width: 720px) {
+    .card {
+        max-width: 370px;
+        margin: 0 auto;
+    }
+}

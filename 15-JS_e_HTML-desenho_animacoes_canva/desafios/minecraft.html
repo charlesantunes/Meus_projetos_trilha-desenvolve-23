@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft</title>
+</head>
+<body style="text-align: center;">
+    <h1>Desafio do Minecraft</h1>
+    <canvas width="350" height="300 "></canvas>
+    <script>
+        var screen = document.querySelector("canvas")
+        var pincel = screen.getContext('2d')
+     
+        //pintar a tela para saber o tamanho(cabeça).
+        pincel.fillStyle = 'darkgreen '; //escolher a cor para pintar
+        
+        pincel.fillRect(0,0,350,300) // 0,0 é x,y inicial, sendo x horizontal e y vertical; 400,350 ponto final.
+
+        pincel.fillStyle = 'black' //cor do pincel
+        pincel.fillRect(50,60,90,90) //olhos esquerdo
+        pincel.fillRect(210,60,90,90) //olhos direito
+        pincel.fillRect(140,150,70,100) //Nariz
+        pincel.fillRect(100,190,40,110) // boca ou barba
+        pincel.fillRect(210,190,40,110) // boca ou barba
+
+    </script>
+</body>
+</html>

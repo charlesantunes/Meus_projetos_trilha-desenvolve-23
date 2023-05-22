@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeira</title>
+</head>
+<body tyle="text-align: center;">
+    <h1>Desafio: Bandeira do Brasil</h1>
+    <canvas width="600" height="400 "></canvas>
+    <script>
+        var screen = document.querySelector("canvas")
+        var pincel = screen.getContext('2d')
+     
+        //tela teste, pintar a tela para saber o tamanho(cabeça).
+        pincel.fillStyle = 'green '; //escolher a cor para pintar        
+        pincel.fillRect(0,0,600,400); // 0,0 é x,y inicial, sendo x horizontal e y vertical; 400,350 ponto final.
+
+
+        pincel.fillStyle = 'yellow';
+        pincel.beginPath();//tag de criação
+        pincel.moveTo(50,200); //ponto inicial, 50px de left
+        pincel.lineTo(300,350); //linha desce ao centro
+        pincel.lineTo(550,200); //linha sobe ao centro, 50px right
+        pincel.fill(); //tag de partida
+
+        pincel.beginPath();
+        pincel.moveTo(50,200); //ponto inicial, 50px de left
+        pincel.lineTo(300,50); //linha sobe ao centro
+        pincel.lineTo(550,200); //linha sobe ao centro, 50px right
+        pincel.fill();
+
+        pincel.fillStyle = 'darkblue';
+        pincel.beginPath();
+        pincel.arc(300,200,100,0,2*3.14)
+        pincel.fill()
+
+
+    </script>
+</body>
+</html>

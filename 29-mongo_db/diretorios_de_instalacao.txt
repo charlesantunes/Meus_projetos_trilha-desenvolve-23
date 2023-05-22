@@ -1,0 +1,66 @@
+============================================
+bd
+.\mongod --dbpath \Users\"Charles Antunes"\Documents\Alura\meus-projetos-alura\projetos_aulas\29-mongo_db\db
+============================================
+bin
+C:\Users\Charles Antunes\Documents\Alura\meus-projetos-alura\projetos_aulas\29-mongo_db\mongodb-win32-x86_64-2008plus-ssl-3.4.24\bin>
+============================================
+executando o mongo
+./mongo
+
+============================================
+tabelas:
+
+criar tabela
+db.createCollection("alunos")
+
+inserir dados(obseve é a mesma estrutura de estaciar um Objeto no js).
+
+db.alunos.insert(
+  {
+    "nome":"Charles",
+    "data_nascimento": new Date(1994,02,26)
+  }
+)
+============================================
+inserindo mais um aluno.
+
+db.alunos.insert(
+    {
+    "nome":"Charles",
+    "data_nascimento": new Date(1994,02,26),
+    "curso":{
+        "nome":"Sistemas de Informação",
+    },
+    "notas":[10.0,7.5,8.0,5.0],
+    "habilidades":[
+        {
+        "nome":"Inglês",
+        "nível":"Intermediario"
+        },
+        {
+        "nome":"futebol",
+        "nível":"Craque"
+        }
+    ]
+    }
+)
+============================================
+consultar aluno:
+
+db.alunos.find()
+============================================
+removendo um aluno (copia o id do id que aparece na pesquisa)
+
+
+
+	{
+	"_id" : ObjectId("64615a7e6ccef7a716355508")
+	}
+)
+============================================
+============================================
+============================================
+============================================
+============================================
+============================================

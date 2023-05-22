@@ -1,0 +1,13 @@
+Divisão do time front-end
+
+UX - User Experience = 
+Usabilidade = como vai entregar as infomações, a forma.
+
+UI - User Interface (interface do usuário)
+Design = responsável pelo visual das imagens do site.
+
+Desenvolvedor Front-end
+codificador = responsável por pegar todas as informações do UX e UI e juntar e dar forma no site ou mobile.
+
+
+

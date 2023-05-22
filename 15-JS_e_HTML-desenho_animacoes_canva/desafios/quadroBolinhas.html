@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenho</title>
+</head>
+
+<body>
+    <h2 style="margin-left: 200px;">Adicionando bolinhas</h2>
+
+    <canvas width="600" height="400" style="border: solid 2px #BCC0E0;">
+    </canvas>
+
+    <section
+        style="margin-left: 230px; display: flex; align-items: center; justify-content: space-between; width: 150px; height: 10px ;">
+        <label>Coordenadas:</label>
+        <p class="coord" style="font-weight: bolder;"></p>
+    </section>
+
+    <h3>Cores: <span style="color:blue">azul</span>, <span style="color:red">vermelho</span>, <span
+            style="color:green">verde</span>, <span style="color:purple">roxo</span></h3>
+    <h3>Aumente o tamanho da bolinha segurando o SHIFT e clicando</h3>
+    <h3>Dominua o tamanho da bolinha segurando o ALT e clicando</h3>
+
+
+    <script>
+        var position = document.querySelector('.coord')
+        var screen = document.querySelector('canvas');
+        var pincel = screen.getContext('2d');
+
+        var raio = 10;
+
+        pincel.fillStyle = 'gray';
+        pincel.fillRect(0, 0, 600, 400);
+
+        function desenharBolinha(event) {
+
+            var x = event.pageX - screen.offsetLeft
+            var y = event.pageY - screen.offsetTop
+
+            if (event.shiftKey && event.altKey) { //shiftKey é em quanto preciona o shift
+                alert('Você deve escolher apenas um botão')
+
+            } else if (event.shiftKey && raio + 5 <= 40) { //shiftKey é em quanto preciona o shift
+                raio = raio + 5
+
+            } else if (event.altKey && raio - 5 >= 10) {   //alttKey é em quanto preciona o alt
+                raio = raio - 5
+            }
+
+
+            pincel.fillStyle = cor[indiceCor];
+            pincel.beginPath();
+            pincel.arc(x, y, raio, 0, 2 * Math.PI);
+            pincel.fill();
+
+            position.innerHTML = x + ' , ' + y
+        }
+
+        var cor = ['blue', 'red', 'green', 'purple']
+        var indiceCor = 0;
+        screen.onclick = desenharBolinha; // desenharBolinha é uma funçãi sem (), dessa forma é acionada apenas quando há uma ação
+
+        function mudarCor() {
+            indiceCor++
+
+            if (indiceCor >= cor.length) {
+                indiceCor = 0;
+            }
+            return false;
+        }
+        screen.oncontextmenu = mudarCor // quando clica no botão direito do mouse 
+
+    </script>
+</body>
+
+</html>

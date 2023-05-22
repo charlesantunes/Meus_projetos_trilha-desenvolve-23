@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Gatos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style_cadastro.css">
+    <link rel="stylesheet" href="../css/style-menu.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="menu-container">
+            <div class="home">
+                <a href="../index.html"><img src="../assets/Logo Positivo.png" class="logo-claro"></a>
+            </div>
+            <div>
+                <p class="menu">Menu<span class="icone-menu"></span></p>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="../listagem_de_gatos/index.html" class="btn lista">Ver lista de Miaus</a>
+            <a href="../cadastro_gatos/index.html" class="btn cadastro">Cadastrar Miau</a>
+        </nav>
+        
+    </header>
+    <div class="container">
+        <form action="cadastro-gatos">
+            <div class="titulo-cadastro">
+                <h2>Cadastro de um novo Miau</h2>
+            </div>
+            <div class="input-foto-gato">
+                <input type="file" id="input-file" class="input-file" />
+                <label for="input-file" class="input-label">+ Clique para adicionar foto</label>
+                <img src="../assets/gato.png" alt="Foto selecionada" id="preview-image" class="previa-foto" />
+            </div>
+            <div id="input-form" class="dados-gato-cliente">
+                <input class="input-forms" type="text" id="nome-gato" placeholder="Nome do(a) Miau" required>
+                <input class="input-forms" type="text" id="nome-dona" placeholder="Nome da pessoa dona" required>
+            </div>
+            <div class="btn-cadastro">
+                <a href="../index.html" class="botoes-cadastro" id="btn1">Cancelar cadastro</a>
+                <button class="botoes-cadastro" id="btn2">Salvar cadastro</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="../script.js"></script>
+    <script src="salvaFoto.js"></script>
+    <script src="salvarCache.js"></script>
+    <script src="botaoAtivar.js"></script>
+</body>
+</html>

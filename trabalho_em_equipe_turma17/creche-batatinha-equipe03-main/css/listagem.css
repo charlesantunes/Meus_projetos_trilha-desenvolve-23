@@ -1,0 +1,128 @@
+/*main*/
+
+body {
+    background: var(--background);
+    display: flexbox;
+}
+
+.lista-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+    background: var(--branco);
+}
+
+.lista-miaus {
+    text-align: center;
+    font-family: var(--montserrat);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #000000;
+    padding: 2.5rem;
+}
+
+.miaus-cadastrados {
+    list-style: none;
+    font-size: 1.25rem;
+    display: grid;
+    padding: 2.5rem;
+}
+
+.miaus-cadastrados li {
+    background-color: var(--branco);
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+    border-radius: 8px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-family: var(--montserrat);
+    color: #111111;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 28px;
+}
+
+.miaus-cadastrados li img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 100px;
+}
+
+.miaus-cadastrados li button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    background-color: var(--branco);
+    color: var(--rosa);
+    border: 2px solid var(--rosa);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.miaus-cadastrados li button:hover {
+    background-color: var(--rosa);
+    color: var(--branco)
+}
+
+/*@media screen and (min-width: 1024px) {
+    .lista-container {
+        margin-left: 21.5rem;
+        margin-right: 21.5rem;
+        margin-top: 9.25rem;
+        margin-bottom: auto;
+        box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.20), 0px 4px 16px rgba(51, 51, 51, 0.25);
+        border-radius: 8px;
+    }
+
+    .lista-miaus {
+        text-align: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #000000;
+        padding-top: 2.5rem;
+    }
+
+    .miaus-cadastrados li button:hover {
+        background-color: var(--rosa);
+        color: var(--branco)
+    }
+}*/
+
+@media screen and (min-width: 768px) {
+    .lista-container {
+        max-width: 768px;
+        margin: 4rem auto;
+        box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+        border-radius: 8px;
+    }
+
+    .miaus-cadastrados li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+
+    .miaus-cadastrados li span {
+        margin-right: 200px;
+    }
+
+    .miaus-cadastrados li button {
+        display: flex;
+        margin-top: 0;
+    }
+}

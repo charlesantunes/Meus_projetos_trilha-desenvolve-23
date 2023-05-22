@@ -1,0 +1,111 @@
+:root {
+    --rosa: #EB339B;
+    --branco: #FFFFFF;
+    --background: #F5F5F5;
+    --montserrat: 'Montserrat', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+    --cinzaclaro: #F5F5F5;
+    --cinzaescuro: #9F9F9F;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo-claro {
+    height: 180px;   
+}
+.menu-container {
+    height: 80px;
+    background: var(--branco);
+    color: var(--rosa);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+.nav {
+    position: relative;
+    bottom: 4.5rem;
+    align-items: center;
+    text-align: center;
+}
+.btn {
+    padding: 10px 20px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+    float: right;  
+}
+.lista {
+    background: var(--branco);
+    color: var(--rosa);
+    border: 2px solid var(--rosa);
+    border-radius: 4px;
+}
+.cadastro {
+    background: var(--rosa);
+    color: var(--branco);
+    border-radius: 4px;
+    border: 2px solid var(--rosa);
+}
+.menu {
+    display: none;
+    position: relative;
+}
+@media(max-width:768px) {
+    .menu-container {
+        height: 120px;
+    }
+    .logo {
+        margin-left: 0;
+        display: flex;
+    }
+   .front-text{
+    font-size: 32px;
+    flex-shrink: 2;
+   }
+   .minor-text{
+    font-size: 24px;
+   }
+   .menu{
+    display: flex;
+    font-family: 'Montserrat';
+   }
+    .icone-menu {
+        border-top: 0.125rem solid;
+        width: 1.25rem;
+        position: relative;
+        left: 5%;   
+    }
+    .icone-menu::before,
+    .icone-menu::after {
+        content: " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background-color: currentColor;
+        margin-top: 0.3125rem;
+    }
+    .nav {
+        display: none;
+        background-color: #ffffff;
+        width: 100%;
+        position: relative;
+        bottom: 0;   
+    }
+    .nav a {
+        width: 100%;
+    }
+    .active {
+        display: flex;
+        flex-direction: column;
+        transition: 1s;
+        font-family: 'Montserrat';
+        padding-bottom: 2%;   
+    }
+}

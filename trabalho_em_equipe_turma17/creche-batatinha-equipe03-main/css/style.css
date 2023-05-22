@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    min-width: 324px;
+}
+body{
+    background: #F5F5F5;
+    
+}
+.container{
+    display: block;
+    margin-left: 25%;
+}
+.front-text{
+    font-family: 'Montserrat';
+    font-size: 64px;
+    margin-top: 5%;
+}
+.minor-text{
+    margin-top: 1%;
+    font-size: 48px;
+    color: rgba(17, 17, 17, 0.48);
+}
+@media screen and (max-width:768px){
+    
+}

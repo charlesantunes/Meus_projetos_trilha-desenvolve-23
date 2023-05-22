@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esquadro</title>
+</head>
+
+<body style="text-align: center;">
+    <h1>Desafio do Régua(Esquadro)</h1>
+    <canvas width="500" height="400 "></canvas>
+    <script>
+        function desenhaTexto(texto, x, y) {
+            var screen = document.querySelector("canvas");
+            var pincel = screen.getContext('2d');
+
+            pincel.fillStyle = 'gray';
+            pincel.fillRect(0, 0, 500, 400),
+
+            pincel.font = '20px georgina';
+            pincel.fillStyle = 'black';
+            pincel.fillText(texto,x,y);
+
+            desenhaQuadrado(50, 50, 100)
+        }
+
+        function desenhaQuadrado(x, y, t) {
+            var screen = document.querySelector("canvas");
+            var pincel = screen.getContext('2d');
+
+            pincel.fillStyle = 'green'
+            pincel.fillRect(x, y, t, t)
+            pincel.strokeRect(x, y, t, t)
+
+            pincel.fillRect(x + 100, y, t, t)
+            pincel.strokeRect(x + 100, y, t, t)
+
+            pincel.fillRect(x + 200, y, t, t)
+            pincel.strokeRect(x + 200, y, t, t)
+
+            pincel.fillRect(x + 300, y, t, t)
+            pincel.strokeRect(x + 300, y, t, t)
+        }
+
+        desenhaTexto("Qual é a fração?", 50, 30)
+        
+
+    </script>
+</body>
+
+</html>

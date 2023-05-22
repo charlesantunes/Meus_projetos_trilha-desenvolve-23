@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Função</h3>
+    <script>
+        //============= Função base ====================
+        function pula2Linhas() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function mostra(frase) {
+            document.write(frase);
+            pula2Linhas();
+        }
+        //==============================================
+        function calcImc(peso, altura) {
+            var imc = peso / (altura * altura)
+            mostra("Seu IMC é " + Math.round(imc))
+        }
+        calcImc(72, 1.68)
+        calcImc(68, 1.58)
+    </script>
+</body>
+
+</html>

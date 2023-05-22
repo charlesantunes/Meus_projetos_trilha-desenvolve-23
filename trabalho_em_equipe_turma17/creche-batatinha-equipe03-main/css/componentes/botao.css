@@ -1,0 +1,26 @@
+.botao {
+    font-family: var(--roboto);
+    font-size: 16px;
+    width: 46.5%;
+    height: 44px;
+    border: solid 2px var(--rosa);
+    border-radius: 3px;
+    cursor: pointer;
+    color:var(--rosa);
+}
+
+.botao:hover {
+    background-color: var(--cinzaescuro);
+    color: var(--branco);
+}
+
+.botao:active {
+    background-color: var(--rosa);
+}
+
+@media(max-width: 720px) {
+    .botao-responsivo {
+        display: flex;
+        flex-direction: row;
+    }
+}

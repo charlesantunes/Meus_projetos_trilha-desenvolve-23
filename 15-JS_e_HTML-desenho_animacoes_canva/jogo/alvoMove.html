@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenho</title>
+</head>
+
+<body>
+    <section>
+
+        <h2>Desenhando com canvas</h2>
+
+        <canvas width="600" height="400">
+        </canvas>
+
+        <section
+            style="margin-left: 230px; display: flex; align-items: center; justify-content: space-between; width: 150px; height: 10px ;">
+            <label>Coordenadas:</label>
+            <p class="coord" style="font-weight: bolder;"></p>
+        </section>
+
+        <script>
+            var screen = document.querySelector('canvas');
+            var pincel = screen.getContext('2d');
+            var position = document.querySelector('.coord')
+
+            function alvo(x, y, raio, cor) {
+                pincel.fillStyle = cor;
+                pincel.beginPath();
+                pincel.arc(x, y, raio, 0, 2 * Math.PI);
+                pincel.fill();
+            }
+
+            raio = 10
+            function limpaTela() {
+                pincel.clearRect(0, 0, 600, 400)
+            }
+
+            var x = 30;
+            var y = 200;
+            function largada() {
+                if (x == 650) {
+                    x = 30
+                }
+                limpaTela();
+                pincel.fillStyle = 'gray';
+                pincel.fillRect(0, 0, 600, 400)
+                alvo(x, y, raio + 20, 'red');
+                alvo(x, y, raio + 10, 'white');
+                alvo(x, y, raio, 'red');
+                x++;
+                position.innerHTML = x + ' , ' + y
+            }
+
+            setInterval(largada, 10)
+        </script>
+    </section>
+</body>
+
+</html>

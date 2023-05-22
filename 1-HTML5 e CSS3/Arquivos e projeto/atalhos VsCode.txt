@@ -1,0 +1,11 @@
+Atalhos do VsCode
+
+ctrl + shift + p , digitar: emmet wrap => Envelopar com a tag desejada
+ctrl + d => seleciona os proximos itens semelhantes ao q vc selecionou (muito bom pra trocar nome de variavel ou renomear tag)
+ctrl + tab => muda a aba dentre as q estão abertas (a gente a gente fica com 1 de html, 1 de css e 1 de js)
+ctrl +a => seleciona tudo da pagina
+ctrl + l => seleciona a linha inteira
+alt + shift + seta(baixo ou cima) => duplica a linha
+ctrl + f => abre o buscador (util para quando o codigo ta grande e vc quer achar algo pela palavra chave
+ctrl + ; => comenta as linhas selecionadas
+alt + seta => move a linha

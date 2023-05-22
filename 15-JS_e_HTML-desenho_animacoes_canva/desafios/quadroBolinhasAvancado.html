@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenho</title>
+</head>
+
+<body>
+    <h2 style="margin-left: 200px;">Adicionando bolinhas</h2>
+
+    <canvas width="600" height="400" style="border: solid 2px #BCC0E0;">
+    </canvas>
+
+    <section
+        style="margin-left: 230px; display: flex; align-items: center; justify-content: space-between; width: 150px; height: 10px ;">
+        <label>Coordenadas:</label>
+        <p class="coord" style="font-weight: bolder;"></p>
+    </section>
+
+    <input type="color">    Cores: <span style="color:blue">azul</span>, <span style="color:red">vermelho</span>, <span
+            style="color:green">verde</span>, <span style="color:purple">roxo</span>
+    <h3>Aumente o tamanho da bolinha segurando o SHIFT e clicando</h3>
+    <h3>Dominua o tamanho da bolinha segurando o ALT e clicando</h3>
+
+
+    <script>
+        var screen = document.querySelector('canvas');
+        var pincel = screen.getContext('2d');
+        
+        var color = document.querySelector('input')
+
+        var raio = 10;
+        var desenha = false;
+
+        pincel.fillStyle = 'gray';
+        pincel.fillRect(0, 0, 600, 400);
+
+        screen.onmousemove = function(event) { // aciona ação com o movimento do mouse
+
+            var x = event.pageX - screen.offsetLeft
+            var y = event.pageY - screen.offsetTop
+
+            if (event.shiftKey && event.altKey) { //shiftKey é em quanto preciona o shift
+                alert('Você deve escolher apenas um botão')
+
+            } else if (event.shiftKey && raio + 5 <= 40) { //shiftKey é em quanto preciona o shift
+                raio = raio + 5
+
+            } else if (event.altKey && raio - 5 >= 10) {   //alttKey é em quanto preciona o alt
+                raio = raio - 5
+            }
+
+            if (desenha) {
+                pincel.fillStyle = color.value;
+                pincel.beginPath();
+                pincel.arc(x, y, raio, 0, 2 * Math.PI);
+                pincel.fill();
+            }
+
+            position.innerHTML = x + ' , ' + y
+        }
+
+
+        screen.onmouseup = function() { //aciona o botao direito do mouse e fica pressionado
+            desenha = true
+        }
+
+        screen.onmousedown = function() { //aciona o botao esquerdo do mouse e fica pressionado
+            desenha = false
+        }
+
+    </script>
+</body>
+
+</html>

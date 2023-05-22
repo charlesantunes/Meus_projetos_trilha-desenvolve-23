@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenho</title>
+</head>
+
+<body>
+    <section>
+
+        <h2>Desenhando com canvas</h2>
+
+        <canvas width="600" height="400">
+        </canvas>
+
+        <script>
+            var screen = document.querySelector('canvas');
+            var pincel = screen.getContext('2d');
+            pincel.fillStyle = 'gray';
+            pincel.fillRect(0, 0, 600, 400)
+            
+            function mostraBola(x,y,raio) {
+                // var x = event.pageX - screen.offsetLeft;
+                // var y = event.pageY - screen.offsetTop;
+                pincel.fillStyle = 'blue'
+                pincel.beginPath();
+                pincel.arc(x, y, raio, 0, 2 * Math.PI)
+                pincel.fill()
+                
+                
+                // console.log(x + ' , ' + y)
+            }
+            
+            function limpaTela() {
+                pincel.clearRect(0,0,600,400)
+            }
+            
+            var x = 20;
+            function largada() {
+                limpaTela();
+                mostraBola(x,20,10);
+                x++;
+            }
+
+            setInterval(largada,10) 
+
+
+        </script>
+    </section>
+</body>
+
+</html>

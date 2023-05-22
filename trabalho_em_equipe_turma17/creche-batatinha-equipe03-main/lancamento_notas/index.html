@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <link rel="stylesheet" href="../css/lancamentos_notas.css">
+    <link rel="stylesheet" href="../css/componentes/card.css">
+    <link rel="stylesheet" href="../css/componentes/botao.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <title>Lançamento de notas</title>
+</head>
+
+
+<body>
+    <!--
+    <header class="cabecalho">
+        
+        <figure>
+            <a href="../index.html"><img src="../assets/Logo-sem-fundo.svg" alt=""></a>
+        </figure>
+        <div>
+            <a href="../listagem_de_gatos/index.html"><label class="botao" for="">Ver lista de Miaus</label></a>
+            <a href="../cadastro_gatos/index.html"><label class="botao" for="">Cadastrar Miau</label></a>
+        </div>
+    </header>
+-->
+    <header>
+        <div class="menu-container">
+            <div class="home">
+                <a href="../index.html"><img src="../assets/Logo Positivo.png" class="logo-claro"></a>
+            </div>
+            <div>
+                <p class="menu">Menu<span class="icone-menu"></span></p>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="./listagem_de_gatos/index.html" class="btn lista">Ver lista de Miaus</a>
+            <a href="./cadastro_gatos/index.html" class="btn cadastro">Cadastrar Miau</a>
+        </nav>
+    </header>
+    <main class="card ">
+        <section class="title-lacamento-notas container">
+            <a href="./listagem_de_gatos/index.html"><button class="seta"></button></a>
+
+            <div class="logo-gato">
+                <img src="./assets/ava.svg" alt="gatinho" id="avata">
+                <h1>Buzz</h1>
+            </div>
+
+            <div class="data">
+                <p></p>
+            </div>
+
+            <div class="linha-title"></div>
+        </section>
+
+        <form action="">
+
+            <section class="avaliacao container">
+                <div class="titulo-pergunta container-text-patas">
+                    <h3>Socialização</h3>
+                    <p>Brinca com os outros gatinhos?</p>
+                </div>
+
+                <ul class="containerPatas container patasSocialicacao">
+                    <li class="Socialicacao pata on oculta"></li>
+                    <li class="Socialicacao pata on" data-socialicacao="1"></li>
+                    <li class="Socialicacao pata on" data-socialicacao="2"></li>
+                    <li class="Socialicacao pata on" data-socialicacao="3"></li>
+                    <li class="Socialicacao pata on" data-socialicacao="4"></li>
+                    <li class="Socialicacao pata on" data-socialicacao="5"></li>
+                </ul>
+
+                <div class="linha"></div>
+            </section>
+
+            <section class="avaliacao container">
+                <div class="titulo-pergunta container-text-patas">
+                    <h3>Sonequinha</h3>
+                    <p>Tira bastante soninho?</p>
+                </div>
+
+                <ul class="containerPatas container patasSoneca">
+                    <li class="Soneca pata on oculta"></li>
+                    <li class="Soneca pata on" data-soneca="1"></li>
+                    <li class="Soneca pata on" data-soneca="2"></li>
+                    <li class="Soneca pata on" data-soneca="3"></li>
+                    <li class="Soneca pata on" data-soneca="4"></li>
+                    <li class="Soneca pata on" data-soneca="5"></li>
+                </ul>
+
+                <div class="linha"></div>
+            </section>
+
+            <section class="avaliacao container">
+                <div class="titulo-pergunta container-text-patas">
+                    <h3>Alimentação</h3>
+                    <p>Está comendo direitinho?</p>
+                </div>
+
+                <ul class="containerPatas container patasAlimentacao">
+                    <li class="Alimentacao pata on oculta"></li>
+                    <li class="Alimentacao pata on" data-alimentacao="1"></li>
+                    <li class="Alimentacao pata on" data-alimentacao="2"></li>
+                    <li class="Alimentacao pata on" data-alimentacao="3"></li>
+                    <li class="Alimentacao pata on" data-alimentacao="4"></li>
+                    <li class="Alimentacao pata on" data-alimentacao="5"></li>
+                </ul>
+
+                <div class="linha"></div>
+            </section>
+
+            <section class="avaliacao container">
+                <div class="titulo-pergunta container-text-patas">
+                    <h3>Brincadeiras</h3>
+                    <p>Participa das brincadeiras em grupo?</p>
+                </div>
+
+                <ul class="containerPatas container patasBrincadeiras">
+                    <li class="Brincadeiras pata on oculta"></li>
+                    <li class="Brincadeiras pata on" data-brincadeiras="1"></li>
+                    <li class="Brincadeiras pata on" data-brincadeiras="2"></li>
+                    <li class="Brincadeiras pata on" data-brincadeiras="3"></li>
+                    <li class="Brincadeiras pata on" data-brincadeiras="4"></li>
+                    <li class="Brincadeiras pata on" data-brincadeiras="5"></li>
+                </ul>
+
+                <div class="linha"></div>
+            </section>
+
+            <section class="avaliacao container">
+                <div class="titulo-pergunta container-text-patas">
+                    <h3>Preguicinha</h3>
+                    <p>Está mais agitado ou quieto?</p>
+                </div>
+
+                <ul class="containerPatas container patasPreguicinha">
+                    <li class="Preguicinha pata on oculta"></li>
+                    <li class="Preguicinha pata on" data-preguicinha="1"></li>
+                    <li class="Preguicinha pata on" data-preguicinha="2"></li>
+                    <li class="Preguicinha pata on" data-preguicinha="3"></li>
+                    <li class="Preguicinha pata on" data-preguicinha="4"></li>
+                    <li class="Preguicinha pata on" data-preguicinha="5"></li>
+                </ul>
+
+                <div class="linha"></div>
+            </section>
+
+            <section class="avaliacao container">
+                <div class="titulo-pergunta container-text-patas">
+                    <h3>Fotos</h3>
+                    <p>Deixa as titias tirarem fotos?</p>
+                </div>
+
+                <ul class="containerPatas container patasFotos">
+                    <li class="Fotos pata on oculta"></li>
+                    <li class="Fotos pata on" data-fotos="1"></li>
+                    <li class="Fotos pata on" data-fotos="2"></li>
+                    <li class="Fotos pata on" data-fotos="3"></li>
+                    <li class="Fotos pata on" data-fotos="4"></li>
+                    <li class="Fotos pata on" data-fotos="5"></li>
+                </ul>
+
+                <div class="linha"></div>
+            </section>
+
+            <section class="avaliacao container botao-responsivo">
+                <input type="button" value="Imprimir Boletim" class="botao"></input>
+                <input type="submit" value="Salvar notas" class="botao" data-botao></input>
+            </section>
+        </form>
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>
