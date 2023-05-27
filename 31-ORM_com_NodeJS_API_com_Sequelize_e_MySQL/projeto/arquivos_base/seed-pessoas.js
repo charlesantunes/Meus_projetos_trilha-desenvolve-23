@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = { //quando criado a tabela do banco de dados, eles aparecem aqui
+module.exports = {
   up: (queryInterface, Sequelize) => {
 		return queryInterface.bulkInsert('Pessoas', [
 			{
